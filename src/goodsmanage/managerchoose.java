@@ -1,4 +1,4 @@
-package goodsmanage;
+ï»¿package goodsmanage;
 import Login.LoginFrame;
 import utils.DBHelper;
 
@@ -59,7 +59,7 @@ public class managerchoose extends JFrame {
 	private JTable table;
 	private JTable table_1;
 	
-	Vector rowData, columnNames;//rowDataÓÃÀ´´æ·ÅĞĞÊı¾İ£¬columnNamesÓÃÀ´´æ·ÅÁĞÃû
+	Vector rowData, columnNames;//rowDataç”¨æ¥å­˜æ”¾è¡Œæ•°æ®ï¼ŒcolumnNamesç”¨æ¥å­˜æ”¾åˆ—å
 	JTable jt = null;
 	JScrollPane jsp = null;
 	
@@ -67,9 +67,9 @@ public class managerchoose extends JFrame {
 	Connection ct = null;
 	ResultSet rs = null;
 	
-	//ÕâÀïµÄ±äÁ¿ÊÇÓÃÀ´ ÔÚÁ½¸ö´°ÌåÖ®¼ä´«ÖµµÄ 
-	//µ±ĞŞ¸Ä»òÕßÉ¾³ıÊ± ÍùÍùĞèÒª½«±¾Ò³ÃæµÄÉÌÆ·ĞÅÏ¢´«¸øÁíÍâÒ»¸ö´°Ìå
-	//ËùÒÔĞèÒª½«Ïà¹Ø²ÎÊı ´æ·ÅÔÚÕâĞ©±äÁ¿Àï
+	//è¿™é‡Œçš„å˜é‡æ˜¯ç”¨æ¥ åœ¨ä¸¤ä¸ªçª—ä½“ä¹‹é—´ä¼ å€¼çš„ 
+	//å½“ä¿®æ”¹æˆ–è€…åˆ é™¤æ—¶ å¾€å¾€éœ€è¦å°†æœ¬é¡µé¢çš„å•†å“ä¿¡æ¯ä¼ ç»™å¦å¤–ä¸€ä¸ªçª—ä½“
+	//æ‰€ä»¥éœ€è¦å°†ç›¸å…³å‚æ•° å­˜æ”¾åœ¨è¿™äº›å˜é‡é‡Œ
 	int index = 0;
 	Object id = "";
 	Object deleteId = "";
@@ -139,13 +139,13 @@ public class managerchoose extends JFrame {
 
 		JComboBox comboBox = new JComboBox();
 		comboBox.setBounds(175, 44, 102, 27);
-		comboBox.setFont(new Font("ËÎÌå", Font.PLAIN, 16));
+		comboBox.setFont(new Font("å®‹ä½“", Font.PLAIN, 16));
 		comboBox.setModel(new DefaultComboBoxModel(new String[] {"\u59AE\u7EF4\u96C5", "OLAY", "\u9999\u5948\u513F", "\u96C5\u8BD7\u5170\u9EDB"}));
 		contentPane.add(comboBox);
 		
 		JComboBox comboBox_1 = new JComboBox();
 		comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"\u9762\u971C", "\u4E73\u6DB2", "\u6D01\u9762", "\u9762\u819C", "\u7CBE\u534E", "\u5316\u5986\u6C34", "\u9632\u6652\u971C", "\u53BB\u89D2\u8D28"}));
-		comboBox_1.setFont(new Font("ËÎÌå", Font.PLAIN, 16));
+		comboBox_1.setFont(new Font("å®‹ä½“", Font.PLAIN, 16));
 		comboBox_1.setBounds(367, 44, 78, 27);
 		contentPane.add(comboBox_1);
 		
@@ -202,10 +202,10 @@ public class managerchoose extends JFrame {
 		JLabel label = new JLabel("\u5546\u54C1\u54C1\u724C\uFF1A");
 		label.setBounds(91, 44, 94, 31);
 		contentPane.add(label);
-		label.setFont(new Font("ËÎÌå", Font.PLAIN, 18));
+		label.setFont(new Font("å®‹ä½“", Font.PLAIN, 18));
 		
 		JLabel label_1 = new JLabel("\u5546\u54C1\u54C1\u7C7B\uFF1A");
-		label_1.setFont(new Font("ËÎÌå", Font.PLAIN, 18));
+		label_1.setFont(new Font("å®‹ä½“", Font.PLAIN, 18));
 		label_1.setBounds(283, 50, 90, 21);
 		contentPane.add(label_1);
 		
@@ -213,10 +213,10 @@ public class managerchoose extends JFrame {
 		table_1.setBounds(95, 152, 1, 1);
 		contentPane.add(table_1);
 		
-		// ´ÓÊı¾İ¿â¶ÁÈ¡ÉÌÆ·ĞÅÏ¢
+		// ä»æ•°æ®åº“è¯»å–å•†å“ä¿¡æ¯
 		String  brand = (String) comboBox.getSelectedItem();
 		String  category = (String) comboBox_1.getSelectedItem();
-		String sql0 = "select * from goodsQuery where goodsBrand like '%ÄİÎ¬ÑÅ%' and goodsCategory like '%ÃæËª%'";
+		String sql0 = "select * from goodsQuery where goodsBrand like '%å¦®ç»´é›…%' and goodsCategory like '%é¢éœœ%'";
 		DBHelper dbHelper = new DBHelper();
 		ArrayList<Goods> goods_list0 =dbHelper.query2(sql0);
 	
@@ -224,15 +224,15 @@ public class managerchoose extends JFrame {
 		table = new JTable();		
 		JScrollPane pane = new JScrollPane();
 		pane.setBounds(0, 89, 844, 382);		
-		Object[] columnNames = new Object[]{"ÉÌÆ·ID", "Æ·ÅÆ", "Æ·Àà", "¿â´æ", "ÒÑÊÛ"};//ÁĞÃû
+		Object[] columnNames = new Object[]{"å•†å“ID", "å“ç‰Œ", "å“ç±»", "åº“å­˜", "å·²å”®"};//åˆ—å
 		Object[][] rowData = new Object[80][5];
 		for (int i = 0; i <goods_list0.size() ; i++) { 
 		    
-		    rowData[i][0]=goods_list0.get(i).getId();//ÕâÀï¸³Öµ
-		    rowData[i][1]=goods_list0.get(i).getGoodsName();//ÕâÀï¸³Öµ
-		    rowData[i][2]=goods_list0.get(i).getCategory();//ÕâÀï¸³Öµ
-		    rowData[i][3]=goods_list0.get(i).getStorage();//ÕâÀï¸³Öµ
-		    rowData[i][4]=goods_list0.get(i).getSell();//ÕâÀï¸³Öµ
+		    rowData[i][0]=goods_list0.get(i).getId();//è¿™é‡Œèµ‹å€¼
+		    rowData[i][1]=goods_list0.get(i).getGoodsName();//è¿™é‡Œèµ‹å€¼
+		    rowData[i][2]=goods_list0.get(i).getCategory();//è¿™é‡Œèµ‹å€¼
+		    rowData[i][3]=goods_list0.get(i).getStorage();//è¿™é‡Œèµ‹å€¼
+		    rowData[i][4]=goods_list0.get(i).getSell();//è¿™é‡Œèµ‹å€¼
 	  
 		}
 
@@ -248,21 +248,21 @@ public class managerchoose extends JFrame {
 		JButton button = new JButton("");
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//µÃµ½comboboxÀïµÄÄÚÈİºó Í¨¹ısqlÓï¾äµ÷ÓÃquery2½øĞĞgoods_listµÄ²éÑ¯
+				//å¾—åˆ°comboboxé‡Œçš„å†…å®¹å é€šè¿‡sqlè¯­å¥è°ƒç”¨query2è¿›è¡Œgoods_listçš„æŸ¥è¯¢
 				String  brand = (String) comboBox.getSelectedItem();
 				String  category = (String) comboBox_1.getSelectedItem();
 				String sql = "select * from goodsQuery where goodsBrand like '%"+brand+"%' and goodsCategory like '%"+category+"%'";
 				DBHelper dbHelper = new DBHelper();
 				ArrayList<Goods> goods_list =dbHelper.query2(sql);
-				//Çå¿Õ
+				//æ¸…ç©º
 				clearData(rowData);
 			   for (int i = 0; i <goods_list.size() ; i++) { 
 				    
-				    rowData[i][0]=goods_list.get(i).getId();//ÕâÀï¸³Öµ
-				    rowData[i][1]=goods_list.get(i).getGoodsName();//ÕâÀï¸³Öµ
-				    rowData[i][2]=goods_list.get(i).getCategory();//ÕâÀï¸³Öµ
-				    rowData[i][3]=goods_list.get(i).getStorage();//ÕâÀï¸³Öµ
-				    rowData[i][4]=goods_list.get(i).getSell();//ÕâÀï¸³Öµ
+				    rowData[i][0]=goods_list.get(i).getId();//è¿™é‡Œèµ‹å€¼
+				    rowData[i][1]=goods_list.get(i).getGoodsName();//è¿™é‡Œèµ‹å€¼
+				    rowData[i][2]=goods_list.get(i).getCategory();//è¿™é‡Œèµ‹å€¼
+				    rowData[i][3]=goods_list.get(i).getStorage();//è¿™é‡Œèµ‹å€¼
+				    rowData[i][4]=goods_list.get(i).getSell();//è¿™é‡Œèµ‹å€¼
 			  
 			   }
 
@@ -283,7 +283,7 @@ public class managerchoose extends JFrame {
 		JButton btnNewButton_1 = new JButton("");
 		btnNewButton_1.setBounds(29, 44, 27, 27);
 		btnNewButton_1.addActionListener(new ActionListener() {
-			// »ñÈ¡Ñ¡ÖĞµÄtableµÄĞĞÊı£¬¸ù¾İĞĞÊıË÷ÒıÀ´»ñÈ¡±»Ñ¡ÖĞÉÌÆ·µÄIDµÈĞÅÏ¢
+			// è·å–é€‰ä¸­çš„tableçš„è¡Œæ•°ï¼Œæ ¹æ®è¡Œæ•°ç´¢å¼•æ¥è·å–è¢«é€‰ä¸­å•†å“çš„IDç­‰ä¿¡æ¯
 			public void actionPerformed(ActionEvent e) {
 				int num = table.getSelectedRow();
 				if(num!=-1) {
