@@ -1,0 +1,4 @@
+# JavaGUI
+JAVAGUI Test
+这是JAVAGUI的一个用户图形界面设计，使用了windowbulider进行图形界面的设计，Java代码进行界面与数据库的链接，实现对商品的增删改查。
+数据库中的数据通过Python爬虫进行爬取，只爬取了几个商品的几个字段。
